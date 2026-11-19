@@ -1,0 +1,297 @@
+{% extends "base.html" %}
+
+{% block title %}Masawa Kemka | Mechanical Engineering Portfolio{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-content">
+        <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
+
+        <h1>Masawa <span>Kemka.</span></h1>
+
+        <h2>Mechanical Engineering Student</h2>
+
+        <p class="intro">
+            Engineering Ideas. Creating Possibilities.
+        </p>
+
+        <p>
+            Passionate about engineering design, innovation,
+            problem-solving and continuous growth.
+            Exploring ideas and turning them into possibilities.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="primary-button">Explore My Work</a>
+            <a href="#contact" class="secondary-button">Contact Me</a>
+            <a href="{{ url_for('static', filename='documents/Masawa_Kemka_CV.pdf') }}"
+            class="cv-button"
+            download>
+        Download My CV
+    </a>
+        </div>
+    </div>
+
+   <div class="profile-image">
+    <img src="{{ url_for('static', filename='images/Masawa_Profile.jpeg') }}"
+         alt="Masawa Kemka"
+         class="profile-photo">
+</div>
+    </div>
+
+</section>
+
+<section id="about">
+    <p class="eyebrow">GET TO KNOW ME</p>
+
+    <h2>About Me</h2>
+
+    <p>
+        I'm Masawa Kemka, a Mechanical Engineering student at
+        Walter Sisulu University with a passion for engineering
+        design, innovation, problem-solving and continuous growth.
+    </p>
+
+    <p>
+        Beyond engineering, I have developed experience in
+        leadership, entrepreneurship, customer engagement and
+        working with people. These experiences have strengthened
+        my ability to communicate, collaborate and take responsibility.
+    </p>
+
+    <p>
+        My goal is to continue developing my technical knowledge
+        while creating meaningful solutions through engineering.
+    </p>
+</section>
+
+<section id="projects">
+    <p class="eyebrow">WHAT I'VE WORKED ON</p>
+    <h2>Engineering Projects</h2>
+
+    <div class="project-card">
+        <div class="project-image">
+    <img src="{{ url_for('static', filename='images/aquatic_wheelchair.jpeg') }}"
+         alt="Aquatic Wheelchair designed using SolidWorks">
+</div>
+        <h3>Aquatic Wheelchair Assembly</h3>
+        <p>Designed and assembled a 3D CAD model of an aquatic wheelchair using SolidWorks. The project focused on mechanical design, component modelling and assembly to develop a mobility solution suitable for aquatic environments.</p>
+        <span>SolidWorks | Mechanical Design</span>
+    </div>
+
+    <div class="project-card">
+       <div class="project-image">
+    <img src="{{ url_for('static', filename='images/Mobile_car_crusher.jpeg') }}"
+         alt="ELV Hydraulic Car Crusher designed using SolidWorks">
+</div>
+        <h3>ELV Hydraulic Car Crusher</h3>
+        <p>
+    Designed and modelled an ELV (End-of-Life Vehicle) Hydraulic Car Crusher
+    using SolidWorks. The project involved applying hydraulic system
+    principles, performing engineering calculations, and developing a
+    mechanical design for vehicle crushing. It provided practical experience
+    in CAD modelling, hydraulic system analysis and applying mechanical
+    engineering principles to an industrial application.
+</p>
+        <span>Hydraulic Systems | Engineering Design</span>
+    </div>
+
+    <div class="project-card">
+        <div class="project-image">
+            <span>PROJECT IMAGE 03</span>
+        </div>
+                <h3>Group 2 Pump Rotor Project</h3>
+        <p>Contributed to the design of a pump rotor as part of a group engineering project using SolidWorks. The project focused on applying mechanical engineering design principles to develop a pump rotor design, providing practical experience in 3D CAD modelling, component design and collaborative problem-solving.</p>
+        <span>Mechanical Engineering | Pump Systems</span>
+    </div>
+</section>
+
+<section id="contact">
+    <p class="eyebrow">GET IN TOUCH</p>
+    <h2>Let's Connect</h2>
+
+    <p>
+        Interested in engineering, collaboration or new opportunities?
+        I'd be happy to connect.
+    </p>
+
+    <div class="info-card">
+        <h3>Email Address</h3>
+        <p>
+            <a href="mailto:kemkamasawa776@gmail.com">
+                kemkamasawa776@gmail.com
+            </a>
+        </p>
+    </div>
+    <div class="info-card">
+    <h3>LinkedIn</h3>
+    <p>
+        <a href="https://za.linkedin.com/in/masawa-kemka-330836424"
+           target="_blank"
+           rel="noopener noreferrer">
+            Connect with me on LinkedIn
+        </a>
+    </p>
+</div>
+<div class="contact-form">
+    <h3>Send Me a Message</h3>
+
+    <form action="/contact" method="POST">
+
+        <label for="name">Full Name</label>
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            required
+        >
+
+        <label for="email">Email Address</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+            required
+        >
+
+        <label for="subject">Subject</label>
+        <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="What is your message about?"
+            required
+        >
+
+        <label for="message">Message</label>
+        <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Write your message here..."
+            required
+        ></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+</div>
+</section>
+<section id="education">
+    <p class="eyebrow">MY ACADEMIC BACKGROUND</p>
+    <h2>Education</h2>
+
+    <div class="info-card">
+        <h3>Walter Sisulu University</h3>
+        <p>Diploma in Mechanical Engineering</p>
+        <p>Current academic year: Not specified</p>
+    </div>
+
+    <div class="info-card">
+        <h3>Maria Louw High School</h3>
+        <p>Grade 12 completed in 2022</p>
+    </div>
+</section>
+
+<section id="experience">
+    <p class="eyebrow">MY PROFESSIONAL JOURNEY</p>
+    <h2>Experience & Leadership</h2>
+
+    <div class="info-card">
+        <h3>Choice Clothing</h3>
+        <p>Casual Assistant | December 2025</p>
+        <p>Assisted customers, arranged stock and supported daily store operations.</p>
+    </div>
+
+    <div class="info-card">
+        <h3>House Committee Chairperson</h3>
+        <p>Coordinated committee members, delegated responsibilities and helped organise activities.</p>
+    </div>
+
+    <div class="info-card">
+        <h3>Examination Assistant</h3>
+        <p>Developed experience in accuracy, confidentiality and responsibility.</p>
+    </div>
+
+    <div class="info-card">
+        <h3>Entrepreneurial Experience</h3>
+        <p>Developed experience in customer interaction, handling payments and business responsibilities.</p>
+    </div>
+</section>
+<section id="skills">
+    <p class="eyebrow">MY CAPABILITIES</p>
+    <h2>Skills & Expertise</h2>
+
+    <div class="skills-container">
+
+        <div class="skill-card">
+            <h3>Technical Skills</h3>
+            <ul>
+                <li>SolidWorks</li>
+                <li>Mechanical Design</li>
+                <li>Engineering Drawing</li>
+                <li>Hydraulic Systems</li>
+                <li>Fluid Mechanics</li>
+                <li>Thermodynamics</li>
+                <li>Strength of Materials</li>
+            </ul>
+        </div>
+
+        <div class="skill-card">
+            <h3>Professional Skills</h3>
+            <ul>
+                <li>Leadership</li>
+                <li>Communication</li>
+                <li>Teamwork</li>
+                <li>Problem-solving</li>
+                <li>Customer Engagement</li>
+                <li>Organisation</li>
+                <li>Accountability</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+<section id="involvement">
+    <p class="eyebrow">BEYOND THE CLASSROOM</p>
+    <h2>Campus Involvement & Activities</h2>
+
+    <div class="info-card">
+        <h3>Residence Event Organisation & Promotion</h3>
+        <p>
+            Contributed to organising and promoting a Red Bull
+            residence event, helping create student engagement
+            and participation.
+        </p>
+    </div>
+
+    <div class="info-card">
+        <h3>Mathematics Extra Classes Promotion</h3>
+        <p>
+            Assisted in promoting Mathematics extra classes
+            to encourage student participation and academic support.
+        </p>
+    </div>
+
+    <div class="info-card">
+        <h3>University Application Assistance</h3>
+        <p>
+            Assisted prospective students with university
+            application processes and guidance.
+        </p>
+    </div>
+
+    <div class="info-card">
+        <h3>House Committee Leadership</h3>
+        <p>
+            Served as House Committee Chairperson, coordinating
+            members, delegating responsibilities and supporting
+            residence activities.
+        </p>
+    </div>
+</section>
+{% endblock %}
